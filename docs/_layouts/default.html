@@ -29,11 +29,9 @@
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-        <img class="logo" src="{{ site.logourl }}" alt="{{ site.logoalt }}">
-        {% endif %}
-
+        {% if site.logourl != null %}
+            <img class="logo" src="{{ site.logourl }}" alt="{{ site.logoalt }}">
+         {% endif %}
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <!--
