@@ -8,9 +8,9 @@ rm -rf docs # delete old files
 cp -r Social-Media-Observatory.wiki ./docs # write new files from Wiki-submodule
 mv _config.yml docs/ # move back backuped files
 mv Gemfile* docs/ # move back backuped files
-mv _layouts docs/ # move back backuped files
-mv assets docs/ # move back backuped files
-mv images docs/
+mv _layouts/ docs/ # move back backuped files
+mv assets/ docs/ # move back backuped files
+mv images/ docs/
 rm docs/.git # remove repository files from docs folder so that it is not recognised as another submodule
 mv docs/Home.md docs/index.md # rename, so that Jekyll uses it as homepage
 python3 convert_links.py # convert [[wiki links]] to [wiki links](wiki-links)
