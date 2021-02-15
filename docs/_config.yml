@@ -2,3 +2,5 @@ theme: jekyll-theme-minimal
 
 title: SMO Wiki
 description: A beautiful snapshot version of the Wiki brought to you by the Social Media Observatory at HBI
+logourl: 'docs/images/Logo_HBI.jpg'
+logoalt: HBI-Logo
