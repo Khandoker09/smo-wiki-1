@@ -3,50 +3,90 @@
 
 @import "{{ site.theme }}";
 
-.topnav input[type=text]  {
-  width: 100%;
-  font-size: 18px;
-  padding: 11px;
-  border: 1px solid #ddd;
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
+//
+//
+// .sidenav{
+//   height: auto;
+//   width: 250px;
+//   position: fixed;
+//   z-index: 1;
+//   top: 0;
+//   right: 0;
+//   background-color: white;
+//   font-size: 18px;
+//
+// }
+//
+// .sidenav a {
+//   padding: 6px 8px 6px 16px;
+//   text-decoration: none;
+//   font-size: 25px;
+//   color: #0086b3;
+//
+// }
+//
+// .sidenav a:hover {
+//   color: #f1f1f1;
+// }
+@import "{{ site.theme }}";
 
-.navigation h1 {
-  font-size:14px;
+.sidenav h1 {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  font-size:18px;
   float:none;
-	margin-bottom: 6px;
-}
-
-.navigation li {
-
-
-  width: 100%;
-  text-align: left;
-  border: none;
-  height: 25px;
-}
-
-.navigation ul li:last-child {
 	margin-bottom: 12px;
 }
 
-.navigation a {
-	text-align: left;
-	width: 100%;
+.sidenav li {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 80%;
+  text-align: left;
+  border: none;
+	height: 25px;
+
 }
 
-.navigation ul {
+.sidenav {
+  z-index: 1;
+  top: 0;
+  right: 0;
+	margin-bottom: 12px;
+}
+
+.sidenav a {
+  z-index: 1;
+  top: 0;
+  font-size:22px;
+  right: 0;
+	text-align: left;
+}
+
+.sidenav ul {
+  z-index: 1;
+  top: 0;
+  right: 0;
 	border: none;
 	background: none;
 }
-
 footer a:hover {
 	font-weight: normal;
+  font-size:18px;
+   width: 100%;
 }
-.logo {
-    display: block;
-    width: 100%;
-    height: auto;
-    float: right;
-
+footer {
+    right: 0;
+    width:auto;
+    float:left;
+    bottom: 10px;
+    text-align: center;
 }

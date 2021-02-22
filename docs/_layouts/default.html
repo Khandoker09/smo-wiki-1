@@ -13,24 +13,25 @@
        <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
         <style>
         body {
-            font-family: 'Barlow Semi Condensed';font-size: 22px;
+            font-family: 'Barlow Semi Condensed';font-size:18px;
         }
         </style>
-  
+
        </head>
         <body>
          <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
- 
+
       </style>
       </head>
       <body>
     <div class="wrapper">
       <header>
+
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         {% if site.logourl != null %}
-            <img class="logo" src="{{ site.logourl }}" alt="{{ site.logoalt }}">
+
          {% endif %}
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
@@ -39,10 +40,6 @@
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
         -->
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
 
         {% if site.show_downloads %}
         <ul class="downloads">
@@ -59,31 +56,32 @@
         <button class="button" type="Search">Go</button>
         </form>
         </div> -->
-        
+
           <form action="https://google.com/search" method="get">
           <input type="hidden" name="sitesearch" value="smo-wiki.leibniz-hbi.de" />
           <input type="text" name="q" />
           <button class="button" type="Search">Go</button>
           </form>
-        <div class="navigation">
-          {% capture sidebar %}{% include_relative _Sidebar.md %}{% endcapture %}
-          {{ sidebar | markdownify }}
-        </div>
-
+          <div class="sidenav">
+            {% capture sidebar %}{% include_relative _Sidebar.md %}{% endcapture %}
+            {{ sidebar | markdownify }}
+          </div>
       </header>
       <section>
 
       {{ content }}
 
       </section>
-          
-<!--       <footer>
+
+      <footer>
+
+        <img class="logo" src="{{ site.logourl }}"width="23%" height="23%"style="vertical-align:center; alt="{{ site.logoalt }}">
         {% if site.github.is_project_page %}
-        <p><small>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></small></p>
+        <p>Powered By <a href="https://leibniz-hbi.de/en"> leibniz-HBI</a></p>
         {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer> -->
-     
+        <p>Made with <a href="https://jekyllrb.com/"> jekyll</a></p>
+      </footer>
+
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
@@ -96,6 +94,6 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
-                                             
+
   </body>
 </html>
